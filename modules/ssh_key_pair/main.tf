@@ -1,0 +1,5 @@
+# create ssh key
+resource "aws_key_pair" "ssh_key" {
+  key_name   = var.key_name
+  public_key = file(local.public_key_filename)
+}
